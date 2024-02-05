@@ -1,4 +1,3 @@
-import xmltodict, requests
 from model import Resolution
 from past_50_resolutions import extract_last_50_resolutions
 

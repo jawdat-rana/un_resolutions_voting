@@ -1,0 +1,23 @@
+<!-- templates/input.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Digit Number Input</title>
+</head>
+<body>
+    <h3>Enter Resolution Record ID</h3>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <form method="POST" action="/">
+        <label for="number_input">Record ID:</label>
+        <input type="text" name="number_input" id="number_input" pattern="\d{7}" title="Please enter a 7-digit number" placeholder="4xxxxxx" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
