@@ -187,7 +187,7 @@ class TestResolution(unittest.TestCase):
         self.assertEqual(self.resolution_instance.get_agenda_subject(), "YEMEN--POLITICAL CONDITIONS")
 
     def test_get_resolution(self):
-        self.assertEqual(self.resolution_instance.get_resolution(), "S/RES/2722(2024)")
+        self.assertEqual(self.resolution_instance.get_resolution_id(), "S/RES/2722(2024)")
 
     def test_get_voting_count(self):
         self.assertEqual(self.resolution_instance.get_voting_count('yes'), "011")
