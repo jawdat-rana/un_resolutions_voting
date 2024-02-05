@@ -21,7 +21,7 @@ class Resolution:
 
         self.date = self.get_date()
         self.title = self.get_title()
-        self.resolution = self.get_resolution()
+        self.resolution_id = self.get_resolution_id()
         self.agenda_title = self.get_agenda_title()
         self.agenda_subject = self.get_agenda_subject()
 
@@ -39,7 +39,7 @@ class Resolution:
                  'title': ['245', 'a'],
                  'agenda_title': ['991', 'c'],
                  'agenda_subject': ['991', 'd'],
-                 'resolution': ['791', 'a'],
+                 'resolution_id': ['791', 'a'],
                  'vote_summary': ['996'],
                  'vote_information': ['967']
                  }
@@ -47,10 +47,13 @@ class Resolution:
     def __str__(self):
         return f"Title: {self.title} \n" \
                f"Date: {self.date} \n" \
-               f"Resolution: {self.resolution}\n" \
+               f"Resolution ID: {self.resolution_id}\n" \
                f"Agenda Title: {self.agenda_title}\n" \
                f"Agenda Subject: {self.agenda_subject} \n" \
                f"Voting Summary: {self.voting_summary}"
+
+    def get_json_data(self):
+        return self.data
 
     def get_date(self):
         tag, code = self.tags_dict['date']
@@ -69,8 +72,8 @@ class Resolution:
         tag, code = self.tags_dict['agenda_subject']
         return self.extract_text_for_tag(tag, code)
 
-    def get_resolution(self):
-        tag, code = self.tags_dict['resolution']
+    def get_resolution_id(self):
+        tag, code = self.tags_dict['resolution_id']
         return self.extract_text_for_tag(tag, code)
 
     def get_voting_count(self, attr: str):
