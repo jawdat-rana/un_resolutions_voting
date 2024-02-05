@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from model import Resolution
+from un_resolutions_voting.model import Resolution
 
 app = Flask(__name__)
 
