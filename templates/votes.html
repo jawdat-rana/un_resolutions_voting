@@ -132,7 +132,7 @@
                 {% endif %}
             </li>
             {% endfor %}
-            {% if adopted_without_voting >= 0 %}
+            {% if adopted_without_voting == 0 %}
             <li class="yes">Adopted Without Voting</li>
             {% endif %}
         </ul>
