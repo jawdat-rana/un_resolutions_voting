@@ -35,5 +35,6 @@ simply use the 7 digit record id from the url
 
 ![url.png](img/url.png)
 
-An image can be downloaded
+Output result
+
 ![4036145.png](img/4036145.png)
