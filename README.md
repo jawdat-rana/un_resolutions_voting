@@ -5,13 +5,11 @@ This code is designed to parse and extract information from JSON data related to
 # Usage
 ```
 # Import the Resolution class
-from model import Resolution
+from resolution import Resolution
 
-# Create an instance of the Resolution class by passing the JSON data, alternatively url id of the resolution can be passed and JSON data will be fetched from the url
+# Create an instance of the Resolution class by passing the JSON data
 resolution_data = {...}  # Replace with actual JSON data
 resolution = Resolution(json_data=resolution_data)
-
-# or resolution = Resolution(id='4033397')
 
 # Access resolution attributes
 print(resolution.title)
@@ -30,3 +28,12 @@ print(resolution.get_countries_with_abstentions_vote())
 print(resolution.get_non_voting_countries())
 print(resolution.get_countries_with_no_vote())
 ```
+
+# Flask App
+A simple web app, using the un_resolution_voting package is hosted on the the following [link](https://un-resolutions-s5e6gpyfea-uc.a.run.app/)
+simply use the 7 digit record id from the url
+
+![url.png](img/url.png)
+
+An image can be downloaded
+![4036145.png](img/4036145.png)
